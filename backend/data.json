@@ -1,0 +1,205 @@
+{
+    "message": "all genre data",
+    "data": [
+        {
+            "genre": "pop",
+            "count": 37
+        },
+        {
+            "genre": "dance pop",
+            "count": 18
+        },
+        {
+            "genre": "uk pop",
+            "count": 9
+        },
+        {
+            "genre": "post-teen pop",
+            "count": 9
+        },
+        {
+            "genre": "filmi",
+            "count": 8
+        },
+        {
+            "genre": "desi pop",
+            "count": 8
+        },
+        {
+            "genre": "modern bollywood",
+            "count": 8
+        },
+        {
+            "genre": "edm",
+            "count": 7
+        },
+        {
+            "genre": "rock",
+            "count": 6
+        },
+        {
+            "genre": "boy band",
+            "count": 5
+        },
+        {
+            "genre": "pop dance",
+            "count": 5
+        },
+        {
+            "genre": "permanent wave",
+            "count": 4
+        },
+        {
+            "genre": "melodic rap",
+            "count": 4
+        },
+        {
+            "genre": "pop rock",
+            "count": 4
+        },
+        {
+            "genre": "canadian contemporary r&b",
+            "count": 4
+        },
+        {
+            "genre": "modern rock",
+            "count": 4
+        },
+        {
+            "genre": "rap",
+            "count": 4
+        },
+        {
+            "genre": "canadian pop",
+            "count": 4
+        },
+        {
+            "genre": "post-grunge",
+            "count": 3
+        },
+        {
+            "genre": "desi hip hop",
+            "count": 3
+        },
+        {
+            "genre": "brostep",
+            "count": 3
+        },
+        {
+            "genre": "progressive electro house",
+            "count": 3
+        },
+        {
+            "genre": "alternative metal",
+            "count": 3
+        },
+        {
+            "genre": "nu metal",
+            "count": 3
+        },
+        {
+            "genre": "punjabi pop",
+            "count": 2
+        },
+        {
+            "genre": "electropop",
+            "count": 2
+        },
+        {
+            "genre": "assamese pop",
+            "count": 2
+        },
+        {
+            "genre": "ambient pop",
+            "count": 2
+        },
+        {
+            "genre": "hip hop",
+            "count": 2
+        },
+        {
+            "genre": "dream pop",
+            "count": 2
+        },
+        {
+            "genre": "shoegaze",
+            "count": 2
+        },
+        {
+            "genre": "indian indie",
+            "count": 2
+        },
+        {
+            "genre": "new delhi indie",
+            "count": 2
+        },
+        {
+            "genre": "neo mellow",
+            "count": 2
+        },
+        {
+            "genre": "punjabi hip hop",
+            "count": 2
+        },
+        {
+            "genre": "pop punk",
+            "count": 2
+        },
+        {
+            "genre": "tropical house",
+            "count": 2
+        },
+        {
+            "genre": "el paso indie",
+            "count": 2
+        },
+        {
+            "genre": "hindi indie",
+            "count": 2
+        },
+        {
+            "genre": "indian rock",
+            "count": 2
+        },
+        {
+            "genre": "australian dance",
+            "count": 1
+        },
+        {
+            "genre": "screamo",
+            "count": 1
+        },
+        {
+            "genre": "indian instrumental",
+            "count": 1
+        },
+        {
+            "genre": "rap conscient",
+            "count": 1
+        },
+        {
+            "genre": "pakistani pop",
+            "count": 1
+        },
+        {
+            "genre": "dance rock",
+            "count": 1
+        },
+        {
+            "genre": "vapor trap",
+            "count": 1
+        },
+        {
+            "genre": "europop",
+            "count": 1
+        },
+        {
+            "genre": "japanese chillhop",
+            "count": 1
+        },
+        {
+            "genre": "indie folk",
+            "count": 1
+        }
+    ]
+}
