@@ -1,0 +1,19 @@
+<h1 class="text-center">Most Played Artists</h1>
+<div class="grid-container text-center">
+    <div class="btn" (click)="sortMonth()">Last Month</div>
+    <div class="btn" (click)="sort6Months()">Last 6 Months</div>
+    <div class="btn" (click)="getData()">All Time</div>
+</div>
+<div class="row">
+    <div class="col-md-3 artist text-center" *ngFor="let item of recentArray">
+        <figure>
+       <img class="img-fluid mx-auto my-auto" src="{{item.images[1].url}}">
+       <figcaption>{{ item.name }}</figcaption>
+       <p>Number of plays: {{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</p>
+       <button class="btn" (click)="openDialog()">{{item.name}}</button>
+    </figure>
+    </div>
+</div>
+<footer class="footer">
+    &copy;Shehban Patel
+</footer>

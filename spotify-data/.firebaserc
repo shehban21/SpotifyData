@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "spotify-data-630fa": {
+      "hosting": {
+        "spotify-data": [
+          "spotify-data-630fa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "spotify-data-630fa"
+  }
+}

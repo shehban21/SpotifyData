@@ -1,0 +1,35 @@
+<h1 class="text-center">Most Played Albums</h1>
+<div class="row">
+    <div class="col-md-3 artist text-center" *ngFor="let item of recentArray">
+        <a href="{{item.external_urls.spotify}}" target="_blank">
+        <figure>
+       <img class="img-fluid mx-auto my-auto" src="{{item.images[1].url}}">
+       <figcaption>{{ item.name }}</figcaption>
+       <p>Number of plays: {{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</p>
+    </figure></a>
+    </div>
+</div>
+<footer class="footer">
+    &copy;Shehban Patel
+</footer>
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>Album</th>
+            <th>Album Type</th>
+            <th>Artists</th>
+            <th>Number Of Plays</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of recentArray">
+        <tr *ngIf="recentArray.indexOf(item) < recentArray.length - 1">
+            <td><figure class="albumart"><a href="{{item.external_urls.spotify}}" target="_blank"><img style="align-items: start;" src="{{item.images[2].url}}"> {{ item.name}} </a></figure></td>
+            <td>{{capitalizeFirstLetter(item.album_type)}}</td>
+            <td><span *ngFor="let artist of item.artists"><a class="btn artist-button" href="{{artist.external_urls.spotify}}" target="_blank">{{ artist.name }} </a></span></td>
+            <td class="text-center">{{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<footer class="footer">
+    &copy;Shehban Patel
+</footer>

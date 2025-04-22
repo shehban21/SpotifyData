@@ -1,0 +1,80 @@
+<h1 class="text-center">Search Spotify</h1>
+<form>
+    <div class="form-group">
+        <label for="search">Enter Search Term:&nbsp;</label>
+        <input type="text" id="search" class="input" placeholder="Search Spotify">
+    </div>
+    <div class="form-group">
+        <label for="type">Type of Search:&nbsp;</label>
+        <select class="form-select-sm" name="type" id="searchType">
+            <option value="track">Song</option>
+            <option value="artist">Artist</option>
+            <option value="album">Album</option>
+        </select>
+    </div>
+    <input type="button" class="btn btn-success" id="submit" value="Search" (click)="getSearch()">
+</form>
+
+<div *ngIf="searchTrackAnswer">
+    <div class="row answer" *ngFor="let item of searchArray">
+        <div class="col-md-4">
+            <img src="{{item.album.images[1].url}}" />
+        </div>
+        <div class="col-md-4 logo" *ngIf="item.artists.length > 1; else artistBlock">
+            <h2>Track: {{ item.name }}</h2>
+            <h3>Artists</h3>
+            <h2 *ngFor="let artist of item.artists">{{ artist.name }}</h2>
+            <a href="{{ item.external_urls.spotify }}" target="_blank"><img
+                    src="https://techblogwriter.co.uk/wp-content/uploads/2020/09/Spotify-button.png"></a>
+        </div>
+        <ng-template #artistBlock>
+            <div class="col-md-4 logo">
+                <h2>Track: {{ item.name }}</h2>
+                <h3>Artist</h3>
+                <h2>{{ item.artists[0].name }}</h2>
+                <a href="{{ item.external_urls.spotify }}" target="_blank"><img
+                        src="https://techblogwriter.co.uk/wp-content/uploads/2020/09/Spotify-button.png"></a>
+            </div>
+        </ng-template>
+        <div class="col-md-4">
+            <audio controls>
+                <source src="{{ item.preview_url }}" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="searchArtistAnswer">
+    <div class="row answer" *ngFor="let item of searchArray">
+        <div class="col-md-4">
+            <img src="{{item.images[1].url}}" />
+        </div>
+        <div class="col-md-4 logo">
+            <h2>Artist Name: {{ item.name }}</h2>
+            <h3>Popularity: {{ item.popularity }}</h3>
+            <h3>Followers: {{ item.followers.total }}</h3>
+            <a href="{{ item.external_urls.spotify }}" target="_blank"><img
+                    src="https://techblogwriter.co.uk/wp-content/uploads/2020/09/Spotify-button.png"></a>
+        </div>
+        <div class="col-md-4">
+            <h2>Genres:</h2>
+            <h3 *ngFor="let genre of item.genres">{{ capitalizeFirstLetter(genre) }}</h3>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="searchAlbumAnswer">
+    <div class="row answer" *ngFor="let item of searchArray">
+        <div class="col-md-6">
+            <a href="{{ item.external_urls.spotify }}" target="_blank">
+                <img src="{{item.images[1].url}}" /></a>
+        </div>
+        <div class="logo col-md-6">
+            <h2>Album Name: {{ item.name }}</h2>
+            <h3>Release Date: {{ item.release_date }}</h3>
+            <h3>Album Type: {{ capitalizeFirstLetter(item.album_type) }}</h3>
+            <a href="{{ item.external_urls.spotify }}" target="_blank"><img
+                    src="https://techblogwriter.co.uk/wp-content/uploads/2020/09/Spotify-button.png"></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="header row">
+    <div class="col-md-2 logo">
+      <img class="img-fluid" src="../../../assets/images/spotifydata.png">
+    </div>
+    <div class="col-md-4 mx-auto my-auto">
+      <h1>Spotify Data</h1>
+    </div>
+    </div>
+    <div>
+    </div>
+<div class="grid-container">
+    <a class="btn grid-item" routerLink="/recent">Recently Played</a>
+    <a class="btn grid-item" routerLink="/mostplayedtracks">Most Played Songs</a>
+    <a class="btn grid-item" routerLink="/mostplayedalbums">Most Played Albums</a>
+    <a class="btn grid-item" routerLink="/mostplayedartists">Most Played Artists</a>
+    <a class="btn grid-item" routerLink="/mostplayedgenres">Most Played Genres</a>
+    <a class="btn grid-item" routerLink="/recommendations">Recommendations</a>
+    <a class="btn grid-item" routerLink="/search">Search Spotify</a>
+    <input class="btn grid-item" type="submit" id="login" name="login" (click)="requestAuthorization();" value="{{btnVal}}">
+</div>

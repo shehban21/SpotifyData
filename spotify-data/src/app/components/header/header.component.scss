@@ -1,0 +1,11 @@
+.btn {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    font-weight: bold;
+}
+
+.grid-container {
+    column-gap: 1%;
+    display: grid;
+    grid-template: auto / auto auto auto auto auto auto auto auto;
+}

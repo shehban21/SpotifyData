@@ -1,0 +1,150 @@
+.artist-button {
+    margin: 1%;
+    background-color: #1dda63;
+    color: black;
+}
+
+.albumart img {
+    max-width: 64px;
+}
+
+.logo img {
+    max-width: 90%;
+}
+.artist-button {
+    background-color: rgba(0,0,0,.5);
+  color: #fff;
+}
+
+#customAudio {
+  max-width:100%;
+}
+
+$btnColor: #148F40;
+$shadow: $btnColor;
+$background: #1D1F20 ;
+
+body {
+    background-color:$background;
+}
+
+.btn {
+  background-color: rgba(0,0,0,.5);
+  margin: 1%;
+  color: #fff;
+}
+
+/* .albumart {
+  filter: blur(4px);
+}
+
+.albumart:hover {
+  filter: blur(0);
+} */
+
+
+.artist-button {
+  margin: 1%;
+  background-color: #1dda63;
+  color: black;
+}
+
+.albumart img {
+  max-width: 64px;
+}
+
+.col-md-3 {
+  padding: 1%;
+}
+
+.artist:hover {
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 0 8px 8px white inset;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1%;
+    row-gap: 0.3%;
+}
+
+.grid-item {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.centered {
+    color: white;
+    font-weight: bold;
+    mix-blend-mode:exclusion;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+/* CSS for the custom play button */
+.custom-play-button {
+    background-color: #1DB954; /* Spotify's green play button color */
+    border: none; /* Remove the button border */
+    border-radius: 50%; /* Create a circular button */
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.2s ease; /* Smooth background color transition on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    max-width: 100%; /* Ensure the button doesn't exceed the parent's width */
+    max-height: 100%; /* Ensure the button doesn't exceed the parent's height */
+    width: 100%; /* Take up the full width of the parent */
+    height: 100%; /* Take up the full height of the parent */
+    position: relative; /* Position relative for absolute positioning of icons */
+  }
+  
+  /* Play and pause icons */
+  .play-icon,
+  .pause-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em; /* Adjust the size of the play/pause icons */
+  }
+  
+  /* Hide the pause icon by default */
+  .pause-icon {
+    display: none;
+  }
+  
+  /* Define styles for button on hover */
+  .custom-play-button:hover {
+    background-color: #1AA050; /* Slightly darker green on hover */
+  }
+  
+  
+.addToPlaylist {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-success {
+    margin-top: 2%;
+    max-width:max-content;
+    background-color: #1dda63;
+    color: black;
+}
+
+.player {
+    margin-bottom: 2%;
+}
+
+.column {
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,63 @@
+<h1 class="text-center justify-content-center">Most Played Tracks</h1>
+<div class="grid-container text-center">
+    <div class="btn" (click)="sortlastmonth()">Last Month</div>
+    <div class="btn" (click)="sortlast6month()">Last 6 Months</div>
+    <div class="btn" (click)="getData()">All Time</div>
+</div>
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>Album Art</th>
+            <th>Track</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Number of Plays</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of recentArray">
+        <tr *ngIf="recentArray.indexOf(item) < recentArray.length - 1">
+            <td><figure class="albumart"><a href="{{item.album.external_urls.spotify}}" target="_blank"><img style="align-items: start;" src="{{item.album.images[2].url}}"></a></figure></td>
+            <td><a class="btn artist-button" href="{{item.external_urls.spotify}}" target="_blank">{{ item.name }}</a></td>
+            <td><span *ngFor="let artist of item.artists"><a class="btn artist-button" href="{{artist.external_urls.spotify}}" target="_blank">{{ artist.name }} </a></span></td>
+            <td><a href="{{item.album.external_urls.spotify}}" target="_blank" class="btn artist-button">{{ item.album.name}}</a></td>
+            <td class="text-center">{{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- <div class="grid-container song">
+<div *ngFor="let item of recentArray, ; let i = index">
+    <div *ngIf="recentArray.indexOf(item) < recentArray.length - 1">
+        <div class="grid-item">
+        <div class="centered"><p>Song Name : {{ item.name }}</p>
+            <p>Number of Plays: {{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</p>
+            <audio [id]="'preview_' + i"><source [src]="item.preview_url"></audio>
+            <button class="custom-play-button" (click)="playAudio(i)">
+                <span class="play-icon">&#9654;</span>
+                <span class="pause-icon">&#9616;&#9616;</span>
+              </button>
+        </div>
+        <a href="{{item.album.external_urls.spotify}}" target="_blank">
+        <img src="{{item.album.images[0].url}}" width="100%" class="albumart" /></a>
+    </div>
+    </div>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-md-3 artist text-center" *ngFor="let item of recentArray; let i = index">
+        <div *ngIf="recentArray.indexOf(item) < recentArray.length - 1">
+            <a href="{{item.album.external_urls.spotify}}" target="_blank">
+                <figure>
+                    <img class="img-fluid mx-auto my-auto" src="{{item.album.images[0].url}}">
+                    <figcaption>{{ item.name }}</figcaption>
+                    <p>Number of plays: {{recentArray[recentArray.length - 1][recentArray.indexOf(item)]}}</p>
+                </figure>
+            </a>
+            <audio id="customAudio" controls>
+                <source src="{{item.preview_url}}" type="audio/ogg">
+            </audio>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    &copy;Shehban Patel
+</footer>

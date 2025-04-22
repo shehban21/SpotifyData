@@ -1,0 +1,54 @@
+<h1 class="text-center">Recently Played Tracks</h1>
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>Album</th>
+            <th>Track</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Played At</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of recentArray ">
+            <td><figure><a href="{{item.track.album.external_urls.spotify}}" target="_blank"><img style="align-items: start;" src="{{item.track.album.images[2].url}}"></a></figure></td>
+            <td><a class="btn artist-button" href="{{item.track.external_urls.spotify}}" target="_blank">{{ item.track.name }}</a></td>
+            <td><span *ngFor="let artist of item.track.artists"><a class="btn artist-button" href="{{artist.external_urls.spotify}}" target="_blank">{{ artist.name }} </a></span></td>
+            <td><a href="{{item.track.album.external_urls.spotify}}" target="_blank" class="btn artist-button">{{ item.track.album.name}}</a></td>
+            <td>{{ item.played_at | date:'long' }}</td>
+        </tr>
+    </tbody>
+</table> -->
+<div class="row addToPlaylist">
+    <a class="btn col-md-4" href="javascript:void(0)" (click)="loadRecentlyPlayed();">Refresh</a>
+    <button class="btn col-md-4" (click)="addToPlaylist()">Add Selections to Selected Playlist(s)</button>
+    <p id="msg" [innerHTML]="msg"></p>
+</div>
+<div class="row">
+    <div class="col-md-3 artist text-center" *ngFor="let item of recentArray; let i = index">
+        <a href="{{item.track.album.external_urls.spotify}}" target="_blank">
+            <figure>
+                <img class="img-fluid mx-auto my-auto" src="{{item.track.album.images[0].url}}">
+                <figcaption style="margin: 3%;">{{ item.track.name }}<br>
+                   {{ item.played_at | date:"dd/MM/yyyy 'at' hh:mm a" }}
+                </figcaption>
+                <p><span *ngFor="let artist of item.track.artists"><a class="btn"
+                            href="{{artist.external_urls.spotify}}" target="_blank">{{ artist.name }} </a></span></p>
+
+            </figure>
+        </a>
+        <audio id="customAudio" controls>
+            <source src="{{item.track.preview_url}}" type="audio/ogg">
+        </audio>
+        <div class="row text-center">
+            <div class="row addToPlaylist">
+                <ng-multiselect-dropdown class="col-md-7" (onSelect)="onItemSelect($event,item.track.id)"
+                    id="{{item.track.id}}" [settings]="dropdownSettings" [data]="playlistArray">
+                </ng-multiselect-dropdown>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    &copy;Shehban Patel
+</footer>

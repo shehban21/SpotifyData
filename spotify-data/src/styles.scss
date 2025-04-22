@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-weight: bold;
+    color: #fff;
+}
+
+body {
+    background: rgb(18,18,18);
+background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(22,76,37,1) 100%);
+background-clip: content-box,padding-box;
+}
+
+a {
+    font-weight: bold;
+    color: #fff;
+}
+
+a:link{
+    font-weight: bold;
+    color: #fff;
+}
+
+button {
+    font-weight: bold;
+    color: #fff;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
