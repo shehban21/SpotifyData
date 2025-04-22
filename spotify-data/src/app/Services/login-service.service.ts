@@ -10,8 +10,8 @@ import { DataService } from './data.service';
 })
 export class LoginServiceService {
 
-  client_id:string = '3261e7dcffd04a7ebc87cca15dc882d4';
-  client_secret: string ='6eec7c68d40b409eb80f94bb3f7622b6';
+  client_id:string = '';
+  client_secret: string ='';
   redirect_uri:string = 'http://localhost:4200/';
   TOKEN:string = 'https://accounts.spotify.com/api/token';
   access_token !: any;
